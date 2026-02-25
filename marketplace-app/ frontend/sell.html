@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيع منتج | سوق العرب</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>سوق العرب</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-shopping-bag"></i> تسوق</a>
+                <a href="sell.html" class="active"><i class="fas fa-plus-circle"></i> بيع منتج</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="sell-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1><i class="fas fa-camera"></i> أضف منتجك للبيع</h1>
+                    <p>املأ التفاصيل وسيتم نشر منتجك فوراً</p>
+                </div>
+
+                <form id="sellForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label><i class="fas fa-tag"></i> اسم المنتج</label>
+                        <input type="text" name="name" required placeholder="مثال: آيفون 14 برو ماكس">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-money-bill-wave"></i> السعر</label>
+                            <input type="number" name="price" required min="0" step="0.01" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-coins"></i> العملة</label>
+                            <input type="text" name="currency" required placeholder="مثال: ريال، دولار، جنيه">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> المدينة</label>
+                        <input type="text" name="city" required placeholder="اكتب اسم مدينتك هنا...">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> اسم البائع</label>
+                            <input type="text" name="sellerName" required placeholder="اسمك">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> رقم التواصل (اختياري)</label>
+                            <input type="tel" name="phone" placeholder="05xxxxxxxx">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-image"></i> صورة المنتج</label>
+                        <div class="file-upload">
+                            <input type="file" name="image" accept="image/*" required id="imageInput">
+                            <label for="imageInput" class="file-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>اضغط لاختيار صورة</span>
+                            </label>
+                            <div class="image-preview" id="imagePreview"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> نشر المنتج
+                    </button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>تم نشر المنتج بنجاح!</h3>
+                    <p>سيتم تحويلك للصفحة الرئيسية...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
