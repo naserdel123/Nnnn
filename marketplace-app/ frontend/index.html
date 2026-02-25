@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق العرب | تسوق وبيع بكل سهولة</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>سوق العرب</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-shopping-bag"></i> تسوق</a>
+                <a href="sell.html"><i class="fas fa-plus-circle"></i> بيع منتج</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>اكتشف منتجات مذهلة من كل المدن</h1>
+            <p>اشتري وبيع بكل سهولة وأمان</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+                <input type="text" id="cityInput" placeholder="اسم المدينة...">
+                <button onclick="searchProducts()"><i class="fas fa-search"></i> بحث</button>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">أحدث المنتجات <span class="count" id="productsCount">(0)</span></h2>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>جاري تحميل المنتجات...</p>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+
+            <div class="no-products" id="noProducts" style="display: none;">
+                <i class="fas fa-box-open"></i>
+                <p>لا توجد منتجات حالياً</p>
+                <a href="sell.html" class="btn-primary">كن أول البائعين</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 سوق العرب. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
